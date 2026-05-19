@@ -25,4 +25,4 @@ jobs:
         run: |
           echo "flag_name: ${{ inputs.flag_name }}"                                                                                                               
           echo "replacement_value: ${{ inputs.replacement_value }}"
-          echo "repository_url: ${{ inputs.repository_url }}"
+          echo "repository_url: ${{ inputs.repo }}"
