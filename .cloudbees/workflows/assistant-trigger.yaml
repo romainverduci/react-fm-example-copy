@@ -4,15 +4,18 @@ name: My workflow
 on:
   workflow_dispatch:
     inputs:
+      repo:
+        type: string
+        required: true
+        description: URL of the code repository from which the feature flag will be removed. For example `https://github.com/my-organisation/my-project`     
       flag_name:
         type: string
         required: true
+        description: Feature flag name.
       replacement_value:
         type: string
         required: true
-      repository_url:
-        type: string
-        required: true
+        description: The value to replace the flag reference with, e.g. true/false (Boolean flags), 'string-value' (String flags), 123.456 (Number flags).
 jobs:
   build:
     steps:
